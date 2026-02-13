@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     color: var(--text-dark);
 }
@@ -80,7 +80,8 @@ body::before {
     z-index: 2;
     text-align: center;
     max-width: 600px;
-    padding: 40px;
+    padding: 40px 20px;
+    width: 100%;
 }
 
 /* Title */
@@ -108,17 +109,18 @@ body::before {
 }
 
 .subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.85rem, 2.5vw, 1.3rem);
     font-weight: 300;
     color: var(--text-dark);
     margin-bottom: 60px;
     opacity: 0;
     animation: fadeIn 2s ease 0.5s forwards;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 0 10px;
 }
 
 @keyframes fadeIn {
-    to { opacity: 0.8; }
+    to { opacity: 0.9; }
 }
 
 /* Heart button */
@@ -447,6 +449,44 @@ audio::-webkit-media-controls {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 30px 15px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: clamp(2rem, 10vw, 3rem);
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+    }
+
+    .heart-button {
+        width: 100px;
+        height: 100px;
+    }
+
+    .heart-icon {
+        font-size: 2.5rem;
+    }
+
+    .button-text {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    
     .audio-player {
         bottom: 20px;
         right: 20px;
@@ -463,19 +503,66 @@ audio::-webkit-media-controls {
 
     .letter {
         padding: 40px 30px;
+        width: 95%;
+    }
+
+    .letter-header {
+        font-size: 1.5rem;
     }
 
     .letter-body {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .letter-signature {
+        font-size: 1.3rem;
+    }
+
+    .particle {
+        font-size: 15px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .title {
+        font-size: clamp(1.8rem, 12vw, 2.5rem);
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
     }
 
     .heart-button {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .heart-icon {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .letter {
+        padding: 30px 20px;
+    }
+
+    .letter-header {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .letter-body {
+        font-size: 1rem;
+    }
+
+    .letter-body p {
+        margin-bottom: 15px;
     }
 }
 
