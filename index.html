@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio player -->
+    <div class="audio-player">
+        <audio id="bgMusic" loop>
+            <source src="assets/Lana Del Rey - Young and Beautiful.mp3" type="audio/mpeg">
+        </audio>
+        <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+            <span class="music-icon playing">♪</span>
+        </button>
+    </div>
+
+    <!-- Floating particles -->
+    <div id="particles"></div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1 class="title">For My Valentine</h1>
+        <p class="subtitle">Mini letter ko sayo Laloves</p>
+        
+        <button class="heart-button" id="openLetter" aria-label="Open love letter">
+            <span class="heart-icon">❤</span>
+            <span class="button-text">Open</span>
+        </button>
+    </div>
+
+    <!-- Love letter -->
+    <div class="letter-container" id="letterContainer">
+        <div class="letter">
+            <span class="letter-heart">❤</span>
+            <span class="letter-heart">❤</span>
+            <span class="letter-heart">❤</span>
+            <span class="letter-heart">❤</span>
+            
+            <button class="close-button" id="closeLetter" aria-label="Close letter">×</button>
+            
+            <div class="letter-header">To My Beloved Girl,</div>
+            
+            <div class="letter-body">
+                <p>Happy Valentine's Day, Laloves!</p>
+
+                <p>May song rin pala to. Pakinggan mo laloves.</p>
+                
+                <p>Bawi ako after ko makatapos ng pag-aaral, and Thank you for everything I am so grateful to have you in my life.</p>
+                
+                <p> Galingan mo palagi, my love! Aral ka mabuti at sana maging successful ka sa buhay. Para maging house husband nalang ako.</p>
+
+                <p>Suportahan kita palagi. Mwah! I love you laloves! I will always be your best friend and your love.</p>
+
+                <p>Thank you for being the most amazing girlfriend in the world. You are my sunshine on a cloudy day, my rock when I need support, and my partner in crime for all of life's adventures.</p>
+
+                <p>Thank you for being you — beautifully, authentically, perfectly you.</p>
+
+                <p>This Valentine's Day and every day, every night, my heart is only yours.</p>
+
+
+            </div>
+            
+            <div class="letter-signature">-Cy❤</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
